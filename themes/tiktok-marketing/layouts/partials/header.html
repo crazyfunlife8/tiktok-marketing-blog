@@ -1,0 +1,68 @@
+{{/* partials/header.html
+     Site header + mobile menu overlay + hamburger JS toggle
+     B站 跳動e行銷 — Field Notes 氣質 header
+     categories source: Option A (.Section) — stage-03 設計決策
+     nav links: uses hugo.toml [menu.main] */}}
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ "/" | relURL }}" class="site-logo" aria-label="{{ .Site.Title }} 首頁">
+      <div class="logo-mark"><span>E</span></div>
+      <span class="logo-text">跳動<em>e</em>行銷</span>
+    </a>
+
+    <nav class="site-nav" aria-label="主導覽">
+      {{ range .Site.Menus.main }}
+        {{ $isCTA := .Params.cta | default false }}
+        {{ if $isCTA }}
+          <a href="{{ .URL }}" class="nav-cta" target="_blank" rel="noopener">{{ .Name }}</a>
+        {{ else }}
+          <a href="{{ .URL | relURL }}"
+             class="{{ if eq $.Section (path.Base .URL | strings.TrimSuffix "/") }}active{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </nav>
+
+    <button class="hamburger" id="hamburger-btn"
+            aria-label="開啟選單" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="行動版選單">
+  {{ range .Site.Menus.main }}
+    {{ $isCTA := .Params.cta | default false }}
+    {{ if $isCTA }}
+      <a href="{{ .URL }}" class="mobile-cta" target="_blank" rel="noopener">{{ .Name }}</a>
+    {{ else }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+    {{ end }}
+  {{ end }}
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamburger-btn');
+  var menu = document.getElementById('mobile-menu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    btn.classList.toggle('open', !open);
+    menu.classList.toggle('open', !open);
+    menu.setAttribute('aria-hidden', String(open));
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menu.classList.contains('open')){
+      btn.setAttribute('aria-expanded', 'false');
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+    }
+  });
+})();
+</script>

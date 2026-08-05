@@ -1,0 +1,82 @@
+{{/* layouts/_default/list.html — 分類頁 / 文章列表
+     B站 跳動e行銷 — 對應 mockup Page B
+     categories source: Option A (.Section) — stage-03 設計決策
+     image pattern: §十 page bundle aware (listing context $page variable lock) */}}
+{{ define "main" }}
+
+{{/* ── Category labels mapping (Option A .Section) ── */}}
+{{ $categoryLabels := dict
+  "account-setup" "帳號設定"
+  "algorithm"     "演算法信號"
+  "material"      "素材製作"
+  "posts"         "實測紀錄"
+}}
+
+{{/* ── Category Header ── */}}
+<div class="category-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="位置導覽">
+      <a href="{{ "/" | relURL }}">首頁</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>{{ .Title }}</span>
+    </nav>
+    <h1 class="category-title">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="category-desc">{{ . }}</p>
+    {{ else }}
+    <p class="category-desc">{{ .Title }} 相關實測文章——記錄每次真實操作的結果，台灣小商家視角。</p>
+    {{ end }}
+  </div>
+</div>
+
+{{/* ── Post list + aside ── */}}
+<div class="post-list-section">
+  <div class="container">
+    <div class="category-page-layout">
+
+      {{/* Main list */}}
+      <main aria-label="{{ .Title }} 文章列表">
+        {{ $pager := .Paginate .Pages }}
+        <ul class="post-list">
+          {{ range $pager.Pages }}
+            {{ $page := . }}
+            {{ if not .Draft }}
+            <li class="post-list-item">
+              <div class="post-list-meta">
+                <span class="tag">{{ index $categoryLabels $page.Section | default $page.Section }}</span>
+                {{ if not .Date.IsZero }}
+                <span class="meta-info meta-date">{{ .Date.Format "2006-01-02" }}</span>
+                {{ end }}
+              </div>
+              <a href="{{ .RelPermalink }}" class="post-list-title">{{ .Title }}</a>
+              <p class="post-list-excerpt">{{ .Summary }}</p>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+        {{ partial "pagination.html" $pager }}
+      </main>
+
+      {{/* Aside */}}
+      <aside class="category-aside" aria-label="其他主題">
+        <div class="aside-title">其他主題</div>
+        <ul class="aside-nav">
+          <li><a href="{{ "/account-setup/" | relURL }}"
+                 {{ if eq .Section "account-setup" }}class="active"{{ end }}>帳號定位 &middot; 初始化設定</a></li>
+          <li><a href="{{ "/algorithm/" | relURL }}"
+                 {{ if eq .Section "algorithm" }}class="active"{{ end }}>演算法信號實測</a></li>
+          <li><a href="{{ "/material/" | relURL }}"
+                 {{ if eq .Section "material" }}class="active"{{ end }}>素材製作流程</a></li>
+        </ul>
+        <div class="aside-cta">
+          <div class="aside-cta-label">想直接投廣告？</div>
+          <p class="aside-cta-text">跳動E投放提供 TikTok 廣告代投服務，適合不想自己摸素材的小商家。</p>
+          <a href="https://blog.nestdigitalai.com/" class="aside-cta-link" target="_blank" rel="noopener">了解服務 &rarr;</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+{{ end }}

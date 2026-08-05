@@ -1,0 +1,32 @@
+{{/* shortcodes/figure.html — page bundle aware figure
+     必須輸出 width + height (SKILL §六 禁止項 4)
+     禁用 Markdown ![]() 語法 (SKILL §六 禁止項 5)
+     用法：{{< figure src="hero.webp" alt="說明文字" >}} */}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $imgURL := "" -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+
+{{- with $src -}}
+  {{- with $.Page.Resources.GetMatch . -}}
+    {{- $imgURL = .RelPermalink -}}
+    {{- $width = .Width -}}
+    {{- $height = .Height -}}
+  {{- else -}}
+    {{- $imgURL = . | absURL -}}
+  {{- end -}}
+{{- end -}}
+
+<figure class="article-figure{{ with $class }} {{ . }}{{ end }}">
+  <img src="{{ $imgURL }}"
+       alt="{{ $alt }}"
+       {{ if $width }}width="{{ $width }}"{{ end }}
+       {{ if $height }}height="{{ $height }}"{{ end }}
+       loading="{{ $loading }}"
+       decoding="async">
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

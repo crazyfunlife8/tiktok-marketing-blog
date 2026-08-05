@@ -1,0 +1,162 @@
+{{/* layouts/index.html — 首頁
+     B站 跳動e行銷 — 分類頁先行首頁：三大主題區塊各取最新文章
+     mockup Page A 設計：Field Notes intro + topic blocks (account-setup/algorithm/material) + stat bar + about snippet
+     categories source: Option A (.Section) — stage-03 設計決策
+     og-image: handled via head.html → og-image-resolve.html partial (§十一·一)
+     image pattern: §十 page bundle aware (listing context $page variable lock) */}}
+{{ define "main" }}
+
+{{/* ── Field Notes Intro（代替 hero splash，純文字）── */}}
+<div class="home-intro">
+  <div class="container">
+    <div class="content-width">
+      <div class="field-note-rule" style="margin-bottom: 1.5rem;">
+        <span class="home-intro-eyebrow">Field Notes &middot; 實測紀錄 2026</span>
+      </div>
+      <h1>台灣小商家的<br>TikTok 有機成長實測筆記</h1>
+      <p class="home-intro-sub">
+        從帳號設定到演算法信號，記錄每一次真實操作的結果。
+        不是代理商視角，是台灣小商家自己摸索出來的可執行方法。
+      </p>
+    </div>
+  </div>
+</div>
+
+{{/* ── 主題區塊 A：TikTok 帳號設定 ── */}}
+{{ $acctPosts := where .Site.RegularPages "Section" "account-setup" }}
+{{ if $acctPosts }}
+<section class="topic-block-section">
+  <div class="container">
+    <div class="content-width">
+      <div class="topic-block-header">
+        <h2 class="topic-block-title">TikTok 帳號設定</h2>
+        <a href="{{ "/account-setup/" | relURL }}" class="topic-block-link">查看全部 &rarr;</a>
+      </div>
+      <div class="topic-article-list">
+        {{ range first 3 ($acctPosts.ByDate.Reverse) }}
+          {{ $page := . }}
+          <div class="topic-article-item">
+            <div class="topic-article-body">
+              <div class="topic-article-meta">
+                <span class="tag">帳號設定</span>
+                {{ if not .Date.IsZero }}<span>{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+              </div>
+              <a href="{{ .RelPermalink }}" class="topic-article-title">{{ .Title }}</a>
+              <p class="topic-article-excerpt">{{ .Summary }}</p>
+              {{ with .ReadingTime }}<span class="topic-article-time">{{ . }} min</span>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── 主題區塊 B：演算法信號實測 ── */}}
+{{ $algoPosts := where .Site.RegularPages "Section" "algorithm" }}
+{{ if $algoPosts }}
+<section class="topic-block-section">
+  <div class="container">
+    <div class="content-width">
+      <div class="topic-block-header">
+        <h2 class="topic-block-title">演算法信號實測</h2>
+        <a href="{{ "/algorithm/" | relURL }}" class="topic-block-link">查看全部 &rarr;</a>
+      </div>
+      <div class="topic-article-list">
+        {{ range first 3 ($algoPosts.ByDate.Reverse) }}
+          {{ $page := . }}
+          <div class="topic-article-item">
+            <div class="topic-article-body">
+              <div class="topic-article-meta">
+                <span class="tag">演算法信號</span>
+                {{ if not .Date.IsZero }}<span>{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+              </div>
+              <a href="{{ .RelPermalink }}" class="topic-article-title">{{ .Title }}</a>
+              <p class="topic-article-excerpt">{{ .Summary }}</p>
+              {{ with .ReadingTime }}<span class="topic-article-time">{{ . }} min</span>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── 主題區塊 C：素材製作流程 ── */}}
+{{ $materialPosts := where .Site.RegularPages "Section" "material" }}
+{{ if $materialPosts }}
+<section class="topic-block-section">
+  <div class="container">
+    <div class="content-width">
+      <div class="topic-block-header">
+        <h2 class="topic-block-title">素材製作流程</h2>
+        <a href="{{ "/material/" | relURL }}" class="topic-block-link">查看全部 &rarr;</a>
+      </div>
+      <div class="topic-article-list">
+        {{ range first 3 ($materialPosts.ByDate.Reverse) }}
+          {{ $page := . }}
+          <div class="topic-article-item">
+            <div class="topic-article-body">
+              <div class="topic-article-meta">
+                <span class="tag">素材製作</span>
+                {{ if not .Date.IsZero }}<span>{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+              </div>
+              <a href="{{ .RelPermalink }}" class="topic-article-title">{{ .Title }}</a>
+              <p class="topic-article-excerpt">{{ .Summary }}</p>
+              {{ with .ReadingTime }}<span class="topic-article-time">{{ . }} min</span>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Stat Bar（實測數字 + 口號）── */}}
+<section class="stat-bar-section">
+  <div class="container">
+    <div class="stat-bar-inner">
+      <div class="stat-bar-numbers">
+        <div class="stat-item">
+          <span class="stat-value">43%</span>
+          <span class="stat-label">實測完播率上限</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">{{ len .Site.RegularPages }}</span>
+          <span class="stat-label">操作實測篇數</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">6 月</span>
+          <span class="stat-label">持續觀察週期</span>
+        </div>
+      </div>
+      <div class="stat-bar-divider"></div>
+      <div class="stat-bar-text">
+        <div class="stat-bar-tagline">不是工具書，是第一手田野筆記</div>
+        <div class="stat-bar-sub">每篇文章背後是實際測試過的操作，不是翻譯的教學。台灣市場、台灣小商家視角。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── About Snippet（人設 + 服務 CTA）── */}}
+<section class="about-snippet-section">
+  <div class="container">
+    <div class="about-snippet-inner">
+      <div>
+        <div class="about-snippet-label">關於本站</div>
+        <p class="about-snippet-desc">
+          跳動<strong style="color: #fff; font-weight: 700;">e</strong>行銷是跳動E投放旗下的 TikTok 有機行銷實測知識站，
+          記錄台灣小商家從零操作 TikTok 有機流量的真實過程。
+          如果你想直接投放 TikTok 廣告，我們有代投服務可以聊。
+        </p>
+      </div>
+      <a href="https://blog.nestdigitalai.com/" class="about-snippet-cta" target="_blank" rel="noopener">了解廣告代投服務 &rarr;</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

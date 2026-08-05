@@ -1,0 +1,23 @@
+{{/* partials/hero-preload.html
+     Hero image preload — 在 head 早期插入、讓瀏覽器並行抓圖加速 LCP
+     §十一·七 紀律：必建 + 必在 Google Fonts CSS link 之前插入
+     B站 LCP element：首頁標題文字（Noto Serif TC h1）、非圖片型
+     故本站 hero preload 效益有限但建立機制供未來擴展 */}}
+{{ if .IsHome }}
+  {{ $sections := slice "posts" }}
+  {{ with (where .Site.RegularPages "Section" "in" $sections) }}
+    {{ $featured := index (.ByDate.Reverse) 0 }}
+    {{ with $featured }}
+      {{ with .Resources.GetMatch "*.{webp,jpg,jpeg,png}" }}
+  <link rel="preload" as="image" href="{{ .RelPermalink }}" fetchpriority="high">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else if .IsPage }}
+  {{ with .Params.image }}
+    {{ $imgRef := . }}
+    {{ with $.Resources.GetMatch $imgRef }}
+  <link rel="preload" as="image" href="{{ .RelPermalink }}" fetchpriority="high">
+    {{ end }}
+  {{ end }}
+{{ end }}

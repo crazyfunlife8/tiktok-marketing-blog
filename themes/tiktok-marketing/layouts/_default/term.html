@@ -1,0 +1,43 @@
+{{/* layouts/_default/term.html — single term page (e.g. /tags/TikTok行銷/)
+     B站 跳動e行銷 — 同字體、同色調、同元件庫（Gate 3）
+     image pattern: §十 page bundle aware (listing context $page variable lock) */}}
+{{ define "main" }}
+
+<div class="category-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="位置導覽">
+      <a href="{{ "/" | relURL }}">首頁</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>{{ .Title }}</span>
+    </nav>
+    <h1 class="category-title">{{ .Title }}</h1>
+    <p class="category-desc">
+      標記「{{ .Title }}」的所有實測紀錄。
+    </p>
+  </div>
+</div>
+
+<div class="post-list-section">
+  <div class="container">
+    {{ $pager := .Paginate .Pages }}
+    <ul class="post-list">
+      {{ range $pager.Pages }}
+        {{ $page := . }}
+        {{ if not .Draft }}
+        <li class="post-list-item">
+          <div class="post-list-meta">
+            {{ if not .Date.IsZero }}
+            <span class="meta-info meta-date">{{ .Date.Format "2006-01-02" }}</span>
+            {{ end }}
+          </div>
+          <a href="{{ .RelPermalink }}" class="post-list-title">{{ .Title }}</a>
+          <p class="post-list-excerpt">{{ .Summary }}</p>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" $pager }}
+  </div>
+</div>
+
+{{ end }}

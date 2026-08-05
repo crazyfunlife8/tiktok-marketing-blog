@@ -1,0 +1,58 @@
+baseURL = "https://marketing.nestdigitalai.com/"
+languageCode = "zh-TW"
+title = "跳動e行銷 — TikTok 有機行銷實測紀錄"
+theme = "tiktok-marketing"
+hasCJKLanguage = true
+enableGitInfo = false
+defaultContentLanguage = "zh-tw"
+summaryLength = 70
+
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  categories = "/:slug/"
+
+[params]
+  description = "台灣小商家用 TikTok 有機內容行銷、從帳號設定到穩定自然流量的操作實測知識庫。不是代理商視角，是小商家第一手自操驗證紀錄。"
+  author = "跳動e行銷實測筆記"
+  siteKeywords = "TikTok行銷,TikTok演算法,TikTok帳號設定,短影音行銷,TikTok素材製作,TikTok自然流量,TikTok內容策略"
+  ogImage = "/og-default.jpg"
+  twitterCard = "summary_large_image"
+
+[menu]
+  [[menu.main]]
+    name = "實測紀錄"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "帳號設定"
+    url = "/account-setup/"
+    weight = 2
+  [[menu.main]]
+    name = "演算法信號"
+    url = "/algorithm/"
+    weight = 3
+  [[menu.main]]
+    name = "素材製作"
+    url = "/material/"
+    weight = 4
+  [[menu.main]]
+    name = "廣告代投服務"
+    url = "https://blog.nestdigitalai.com/"
+    weight = 5
+    params.cta = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

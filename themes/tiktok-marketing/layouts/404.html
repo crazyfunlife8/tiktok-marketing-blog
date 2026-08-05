@@ -1,0 +1,17 @@
+{{/* layouts/404.html — 404 Not Found
+     B站 跳動e行銷 — 同字體、同色調、同元件庫（Gate 3） */}}
+{{ define "main" }}
+
+<div class="error-page">
+  <div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">找不到這頁了</h1>
+    <p class="error-desc">
+      這個頁面可能已經移除、或網址有誤。<br>
+      返回首頁繼續閱讀 TikTok 有機行銷實測紀錄。
+    </p>
+    <a href="{{ "/" | relURL }}" class="error-home">回到首頁</a>
+  </div>
+</div>
+
+{{ end }}

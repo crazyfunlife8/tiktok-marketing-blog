@@ -1,0 +1,100 @@
+{{/* partials/head.html — SEO meta baseline (stage-03 §三 Gate 6)
+     B站 跳動e行銷 — OG / Twitter Card / canonical / JSON-LD / favicon / fonts
+     CJK fonts: preload+onload swap (§十一·十 紀律、Noto Serif TC = CJK)
+     main.css: sync stylesheet (§十一·八 紀律、防 below-fold CLS)
+     cache busting: ?v={{ now.Unix }} (§十一·五 紀律) */}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{/* Hero image preload — LCP optimization (§十一·七) */}}
+{{ partial "hero-preload.html" . }}
+
+{{/* ── Google Fonts: CJK → preload+onload swap (§十一·十) ── */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Outfit:wght@400;600&family=JetBrains+Mono:wght@400&display=swap"
+  onload="this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Outfit:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+</noscript>
+
+{{/* ── Critical CSS inline (above-fold: header + home-intro — §十一·八) ── */}}
+<style>
+:root{--color-accent:#1A6B4A;--color-accent-hover:#135238;--color-accent-light:#E8F5EE;--color-bg:#FAFAF7;--color-bg-warm:#F5F0E8;--color-bg-white:#FFFFFF;--color-text:#1C1C1A;--color-text-muted:#5C5C58;--color-border:#D8D4CC;--font-serif:'Noto Serif TC','Georgia',serif;--font-ui:'Outfit','Helvetica Neue',sans-serif;--font-mono:'JetBrains Mono','Courier New',monospace;--space-xs:0.25rem;--space-sm:0.5rem;--space-md:1rem;--space-lg:1.5rem;--space-xl:2.5rem;--space-2xl:4rem;--space-3xl:6rem;--content-max:720px;--site-max:1080px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font-serif);font-weight:400;color:var(--color-text);background:var(--color-bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:var(--color-accent);text-decoration:none}
+a:hover{color:var(--color-accent-hover)}
+img{display:block;max-width:100%;height:auto}
+.container{max-width:var(--site-max);margin:0 auto;padding:0 var(--space-xl)}
+.content-width{max-width:var(--content-max);margin:0 auto}
+.site-header{background:var(--color-bg-white);border-bottom:1px solid var(--color-border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:var(--site-max);margin:0 auto;padding:0 var(--space-xl)}
+.site-logo{display:flex;align-items:center;gap:var(--space-sm);text-decoration:none}
+.logo-mark{width:36px;height:36px;background:var(--color-accent);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-mark span{font-family:var(--font-serif);font-weight:700;font-size:1rem;color:var(--color-bg-white);line-height:1}
+.logo-text{font-family:var(--font-serif);font-weight:700;font-size:1rem;color:var(--color-text);letter-spacing:-0.01em}
+.logo-text em{color:var(--color-accent);font-style:normal}
+.site-nav{display:flex;align-items:center;gap:var(--space-xl)}
+.site-nav a{font-family:var(--font-ui);font-weight:400;font-size:0.88rem;color:var(--color-text-muted);text-decoration:none;transition:color 180ms ease-out}
+.hamburger{display:none;flex-direction:column;gap:5px;align-items:flex-end;background:none;border:none;cursor:pointer;padding:var(--space-xs)}
+.hamburger span{display:block;height:2px;background:var(--color-text);border-radius:1px;transition:all 200ms ease-out}
+.home-intro{background:var(--color-bg-warm);border-bottom:1px solid var(--color-border);padding:var(--space-3xl) 0 var(--space-2xl)}
+.field-note-rule{border-left:3px solid var(--color-accent);padding-left:var(--space-md)}
+@media(max-width:768px){.site-nav{display:none}.hamburger{display:flex}.container{padding:0 var(--space-lg)}}
+</style>
+
+{{/* ── main.css sync stylesheet (§十一·八 sync 紀律、防 CLS) ── */}}
+<link rel="stylesheet" href="{{ "/css/main.css" | absURL }}?v={{ now.Unix }}">
+
+{{/* ── Page title ── */}}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+{{/* ── Meta description ── */}}
+{{ $desc := .Description | default .Site.Params.description }}
+<meta name="description" content="{{ $desc }}">
+
+{{/* ── Canonical ── */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* ── Robots ── */}}
+<meta name="robots" content="index, follow">
+
+{{/* ── OG image resolve (§十一·一 partial 集中、§十) ── */}}
+{{ $ogImage := partial "og-image-resolve.html" . }}
+{{ if not $ogImage }}
+  {{ $ogImage = "/og-default.jpg" | absURL }}
+{{ end }}
+
+{{/* ── Open Graph ── */}}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ end }}
+
+{{/* ── Twitter Card ── */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+
+{{/* ── Favicon 4 link tags (§十一·九 Gate 10) ── */}}
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+{{/* ── Structured data (schema) ── */}}
+{{ partial "schema.html" . }}

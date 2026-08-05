@@ -1,0 +1,6 @@
+{{- /* budget-table shortcode: ROI / equivalent hourly-rate comparison table
+       B站 跳動e行銷 — title/sub attribute + .Inner markdown table
+       SKILL §十二·3 規範 */ -}}
+{{- $title := .Get "title" -}}
+{{- $sub := .Get "sub" -}}
+<div class="budget-table-wrap">{{ with $title }}<div class="budget-table-head"><span class="budget-table-head-title">{{ . }}</span>{{ with $sub }}<span class="budget-table-head-sub">{{ . }}</span>{{ end }}</div>{{ end }}<div class="budget-table-inner">{{ .Inner | markdownify }}</div></div>

@@ -1,0 +1,80 @@
+{{/* layouts/_default/single.html — 單篇文章頁
+     B站 跳動e行銷 — 對應 mockup Page C
+     categories source: Option A (.Section) — stage-03 設計決策
+     OG image: 透過 og-image-resolve.html partial (§十一·一)
+     hero img: loading="eager" fetchpriority="high" (§十一·七)
+     日期條件化: {{ if not .Date.IsZero }} (Gate 11) */}}
+{{ define "main" }}
+
+{{/* Category label mapping (Option A .Section) */}}
+{{ $categoryLabels := dict
+  "account-setup" "帳號設定"
+  "algorithm"     "演算法信號"
+  "material"      "素材製作"
+  "posts"         "實測紀錄"
+}}
+{{ $catLabel := index $categoryLabels .Section | default .Section }}
+
+<div style="padding-top: var(--space-2xl);"></div>
+
+<div class="container">
+  <div class="content-width">
+
+    <div class="article-header">
+      <div class="article-category-tag">
+        <span class="tag">{{ $catLabel }}</span>
+      </div>
+      <h1 class="article-title">{{ .Title }}</h1>
+      <div class="article-meta-row">
+        <span class="article-author">{{ .Site.Params.author }}</span>
+        {{ if not .Date.IsZero }}
+        <span class="article-date">{{ .Date.Format "2006-01-02" }}</span>
+        {{ end }}
+        {{ with .ReadingTime }}
+        <span class="article-read-time">{{ . }} min read</span>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Hero image — page bundle (eager for LCP) */}}
+    {{ with .Resources.GetMatch (.Params.image | default "*.{webp,jpg,jpeg,png}") }}
+    <div class="article-figure">
+      <img src="{{ .RelPermalink }}"
+           alt="{{ $.Title }}"
+           width="{{ .Width }}"
+           height="{{ .Height }}"
+           loading="eager"
+           fetchpriority="high">
+    </div>
+    {{ end }}
+
+    <article class="article-body">
+      {{ .Content }}
+
+      {{/* Article tags */}}
+      {{ with .Params.tags }}
+      <div class="article-tags">
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </article>
+
+    {{/* Related articles */}}
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ if $related }}
+    <div class="related-articles">
+      <p class="related-title">相關實測紀錄</p>
+      <ul class="related-list">
+        {{ range $related }}
+        <li class="related-item">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+  </div>
+</div>
+
+{{ end }}

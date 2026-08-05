@@ -1,0 +1,33 @@
+{{/* layouts/_default/taxonomy.html — taxonomy archive page (categories/tags 列表)
+     B站 跳動e行銷 — 同字體、同色調、同元件庫（Gate 3）
+     日期條件化 (Gate 11) */}}
+{{ define "main" }}
+
+<div class="category-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="位置導覽">
+      <a href="{{ "/" | relURL }}">首頁</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>{{ .Title }}</span>
+    </nav>
+    <h1 class="category-title">{{ .Title }}</h1>
+    <p class="category-desc">
+      本站所有 {{ .Title }} 分類彙整。
+    </p>
+  </div>
+</div>
+
+<div class="post-list-section">
+  <div class="container">
+    <ul class="post-list">
+      {{ range .Data.Terms.Alphabetical }}
+      <li class="post-list-item">
+        <a class="post-list-title" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        <p class="post-list-excerpt meta-info">共 {{ .Count }} 篇文章</p>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+
+{{ end }}
