@@ -147,7 +147,7 @@ TikTok 帳號的 bio 實際上有三個獨立的欄位，演算法對每個欄�
 
 最後一點補充：bio 寫好之後，**影片發布的一致性**是讓演算法持續確認帳號定位的方法。一個月只發3支影片但每支都精準對焦，比每天發影片但主題亂跳更能穩定帳號的分類標籤。bio 設定好是第一步，影片內容跟 bio 的定位對齊才是讓推送持續精準的關鍵。
 
-影片的完播率訊號如何進一步強化推送精準度，可以參考{{< relref "tiktok-completion-rate-vs-engagement-rate" >}}的完整記錄。
+影片的完播率訊號如何進一步強化推送精準度，可以參考{{< relref "tiktok-completion-rate-vs-engagement-rate" >}}的完整記錄。如果 bio 改完之後觸及反而暴跌，先別急著怪演算法——可能是踩到限流的常見原因，可以對照{{< relref "tiktok-account-shadowban-diagnosis" >}}的 8 個自診項目排查。
 
 ---
 
