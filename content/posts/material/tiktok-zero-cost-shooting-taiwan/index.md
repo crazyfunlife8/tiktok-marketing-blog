@@ -89,7 +89,7 @@ draft: false
 
 **知識 / 教學型（無實體商品）：** 首選「窗邊自然光」拍人物講解——光線柔和讓臉部表情自然、觀眾停留時間長。次選「室內空白背景」保持專注在人物講解。
 
-拍攝場景選定後、下一個影響完播率的操作是剪輯節奏——實測 2-3 秒切換一次的節奏完播率最高、可以看 {{< relref "tiktok-editing-rhythm-for-algorithm" >}} 的手機 CapCut 完整操作紀錄。腳本結構與場景的搭配則可以看 {{< relref "tiktok-script-3-part-framework" >}} 的 3 段式框架。
+拍攝場景選定後、下一個影響完播率的操作是剪輯節奏——實測 2-3 秒切換一次的節奏完播率最高、可以看 {{< relref "tiktok-editing-rhythm-for-algorithm" >}} 的手機 CapCut 完整操作紀錄。腳本結構與場景的搭配則可以看 {{< relref "tiktok-script-3-part-framework" >}} 的 3 段式框架。拍好影片之後、封面設計決定搜尋清單裡觀眾點不點——實測含數字標題封面 CTR 8.4%、比無文字美觀圖多 4 倍、封面 A/B 完整實測見 {{< relref "tiktok-cover-design-ab-test" >}}。
 
 ---
 
