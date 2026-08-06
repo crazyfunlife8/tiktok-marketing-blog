@@ -110,7 +110,7 @@ TikTok 演算法對新影片的初始推送有一個「發文後前 30 分鐘互
 
 **方法四：結合互動信號一起看。** 光看觸及不夠——高觸及但互動低的時段，其實不是「最佳時段」。要同時看轉發率、收藏率（詳見{{< relref "tiktok-engagement-signal-ranking" >}}裡的信號權重排名），高觸及 + 高互動的時段才是真的黃金時段。
 
-如果你在其中某個時段實測到觸及暴跌，先不要急著換時段——可能是踩到限流訊號，先對照{{< relref "tiktok-account-shadowban-diagnosis" >}}的 8 個自診項排查，[algorithm 分類](/posts/algorithm/)裡其他演算法信號的實測也值得一起看。
+如果你在其中某個時段實測到觸及暴跌，先不要急著換時段——可能是踩到限流訊號，先對照{{< relref "tiktok-account-shadowban-diagnosis" >}}的 8 個自診項排查，[algorithm 分類](/posts/algorithm/)裡其他演算法信號的實測也值得一起看。時段選對之後、關鍵字布局是提升搜尋觸及的下一個槓桿——TikTok 搜尋演算法 2026 年權重變化與標題 / 說明 / 字幕的關鍵字位置實測可以看 {{< relref "tiktok-search-algorithm-keyword-2026" >}}。
 
 ---
 
