@@ -88,4 +88,4 @@ draft: false
 
 ---
 
-*本文數據來自 2026 年間某台灣小商家帳號 12 支影片實測。TikTok 演算法對不同長度的權重評估會持續調整、建議定期在自己帳號上重新驗證各長度的完播率表現。想要用 TikTok 廣告放大高完播率短影片的觸及、或補足長影片觸及的量、可以看 [跳動E投放](../services/ads.html) 的 TikTok 廣告代投服務——付費廣告可以獨立於自然完播率的邏輯放大特定影片的觸及量。[TikTok Business 對創作長度的官方建議](https://www.tiktok.com/business/en/blog/creative-best-practices)也持續更新最新的長度趨勢。*
+*本文數據來自 2026 年間某台灣小商家帳號 12 支影片實測。TikTok 演算法對不同長度的權重評估會持續調整、建議定期在自己帳號上重新驗證各長度的完播率表現。想要用 TikTok 廣告放大高完播率短影片的觸及、或補足長影片觸及的量、可以看 [跳動E投放](https://nestdigitalai.com/services/ads) 的 TikTok 廣告代投服務——付費廣告可以獨立於自然完播率的邏輯放大特定影片的觸及量。[TikTok Business 對創作長度的官方建議](https://www.tiktok.com/business/en/blog/creative-best-practices)也持續更新最新的長度趨勢。*

@@ -93,4 +93,4 @@ draft: false
 
 ---
 
-*本文數據來自 2026 年間台灣兩個小商家帳號 20 支影片的實地測試。TikTok 觀眾對場景美感的期待會隨時間演變、建議定期在自己帳號上重新驗證場景效果。想要進一步提升商品拍攝品質、又不想投資設備、可以看 [跳動E投放](../services/ads.html) 的 TikTok 廣告代投服務——用付費廣告放大零成本拍攝的高完播率影片是台灣小商家最經濟的組合。更多素材製作實測整理可以看 [material 分類](/posts/material/)。[TikTok Business 對創作者的內容製作建議](https://www.tiktok.com/business/en/blog/creative-best-practices)也強調「真實感 vs 過度製作」的取捨、與本文實測結論一致。*
+*本文數據來自 2026 年間台灣兩個小商家帳號 20 支影片的實地測試。TikTok 觀眾對場景美感的期待會隨時間演變、建議定期在自己帳號上重新驗證場景效果。想要進一步提升商品拍攝品質、又不想投資設備、可以看 [跳動E投放](https://nestdigitalai.com/services/ads) 的 TikTok 廣告代投服務——用付費廣告放大零成本拍攝的高完播率影片是台灣小商家最經濟的組合。更多素材製作實測整理可以看 [material 分類](/posts/material/)。[TikTok Business 對創作者的內容製作建議](https://www.tiktok.com/business/en/blog/creative-best-practices)也強調「真實感 vs 過度製作」的取捨、與本文實測結論一致。*
