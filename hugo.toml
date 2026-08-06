@@ -37,15 +37,15 @@ disableKinds = ["taxonomy", "term"]
     weight = 1
   [[menu.main]]
     name = "帳號設定"
-    url = "/account-setup/"
+    url = "/posts/account-setup/"
     weight = 2
   [[menu.main]]
     name = "演算法信號"
-    url = "/algorithm/"
+    url = "/posts/algorithm/"
     weight = 3
   [[menu.main]]
     name = "素材製作"
-    url = "/material/"
+    url = "/posts/material/"
     weight = 4
   [[menu.main]]
     name = "廣告代投服務"
