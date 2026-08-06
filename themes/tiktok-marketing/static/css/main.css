@@ -715,7 +715,32 @@ img { display: block; max-width: 100%; height: auto; }
   border-radius: 2px;
   color: var(--color-accent);
 }
-.article-body table { width: 100%; }
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-xl) 0;
+  font-size: 0.9rem;
+}
+.article-body table th {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-warm);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  white-space: nowrap;
+}
+.article-body table td {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.article-body table td:first-child {
+  white-space: nowrap;
+  font-weight: 500;
+  color: var(--color-text);
+}
 
 /* Field Note Callout */
 .field-note-callout {
