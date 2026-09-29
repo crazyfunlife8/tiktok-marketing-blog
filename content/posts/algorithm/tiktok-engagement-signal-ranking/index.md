@@ -89,7 +89,7 @@ TikTok 的推薦系統對每種互動賦予的權重不一樣。根據 [TikTok N
 
 **策略五：長期主打轉發型內容當主軸。** 從自然流量成長速度看，轉發型內容能持續拉高帳號的「陌生觸及池」——這對長期成長最重要。收藏型內容適合當「品牌信任建立」的中期主軸、留言型內容適合當「社群經營」的補充。
 
-冷啟動期的 30 分鐘內互動品質對觸及的長期影響，可以看{{< relref "tiktok-algorithm-initial-30min-window" >}}的完整追蹤紀錄；如果你想看整個 [algorithm 分類](/posts/algorithm/)裡其他信號類型的實測資料，也可以進一步比對。
+冷啟動期的 30 分鐘內互動品質對觸及的長期影響，可以看{{< relref "tiktok-algorithm-initial-30min-window" >}}的完整追蹤紀錄；影片聲音訊號（Trending 音樂 vs 原聲 vs 無音樂）是另一個影響 FYP 分配的「影片資訊」層訊號，三種音軌的觸及差距實測可以看 {{< relref "tiktok-trending-music-vs-original-sound" >}}；如果你想看整個 [algorithm 分類](/posts/algorithm/)裡其他信號類型的實測資料，也可以進一步比對。
 
 ---
 
