@@ -25,10 +25,14 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "台灣小商家用 TikTok 有機內容行銷、從帳號設定到穩定自然流量的操作實測知識庫。不是代理商視角，是小商家第一手自操驗證紀錄。"
-  author = "跳動e行銷實測筆記"
+  author = "Nora（有機行銷實測）"
+  authorURL = "https://marketing.nestdigitalai.com/about/"
   siteKeywords = "TikTok行銷,TikTok演算法,TikTok帳號設定,短影音行銷,TikTok素材製作,TikTok自然流量,TikTok內容策略"
   ogImage = "/og-default.jpg"
   twitterCard = "summary_large_image"
+  ga4_measurement_id = "G-DGCZ48ZGMB"
+  ga4_property_id = "557070721"
+  ga4_stream_id = "15940448764"
 
 [menu]
   [[menu.main]]
@@ -48,9 +52,13 @@ disableKinds = ["taxonomy", "term"]
     url = "/posts/material/"
     weight = 4
   [[menu.main]]
+    name = "關於作者"
+    url = "/about/"
+    weight = 5
+  [[menu.main]]
     name = "廣告代投服務"
     url = "https://blog.nestdigitalai.com/"
-    weight = 5
+    weight = 6
     params.cta = true
 
 [sitemap]
