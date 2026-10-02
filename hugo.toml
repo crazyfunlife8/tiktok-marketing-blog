@@ -4,6 +4,7 @@ title = "跳動e行銷 — TikTok 有機行銷實測紀錄"
 theme = "tiktok-marketing"
 hasCJKLanguage = true
 enableGitInfo = false
+enableRobotsTXT = true
 defaultContentLanguage = "zh-tw"
 summaryLength = 70
 

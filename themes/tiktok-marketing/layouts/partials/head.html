@@ -60,8 +60,12 @@ img{display:block;max-width:100%;height:auto}
 {{/* ── Canonical ── */}}
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{/* ── Robots ── */}}
+{{/* ── Robots: noindex section/taxonomy/term list pages ── */}}
+{{ if or (eq .Kind "section") (eq .Kind "taxonomy") (eq .Kind "term") }}
+<meta name="robots" content="noindex, follow">
+{{ else }}
 <meta name="robots" content="index, follow">
+{{ end }}
 
 {{/* ── OG image resolve (§十一·一 partial 集中、§十) ── */}}
 {{ $ogImage := partial "og-image-resolve.html" . }}
