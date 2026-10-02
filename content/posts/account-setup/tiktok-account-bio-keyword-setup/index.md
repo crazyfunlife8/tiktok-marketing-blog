@@ -173,4 +173,12 @@ TikTok 帳號的 bio 實際上有三個獨立的欄位，演算法對每個欄�
 
 ---
 
+## 延伸閱讀
+
+- {{< relref "tiktok-account-init-5-steps" >}}：bio 設定完成後，帳號初始化的正確 5 步順序——哪一步做錯，第一支影片觸及直接減半。
+- {{< relref "tiktok-account-region-setting-test" >}}：地區設定與 bio 雙重影響推送精準度，台灣本地商家的地區訊號實測數據。
+- {{< relref "tiktok-cold-start-30-day-diary" >}}：bio 設定好之後，冷啟動 30 天的完整操作日誌，含每週觸及變化與決策記錄。
+
+---
+
 *本文數據來自2026年7月台灣市場帳號實際操作記錄。如果你的帳號 bio 已設定好、下一步想讓廣告配合有機成長加速建立精準受眾，[跳動E投放](https://nestdigitalai.com/services/ads)提供台灣小商家 TikTok 廣告代投，可以作為有機成長的付費輔助選項。*

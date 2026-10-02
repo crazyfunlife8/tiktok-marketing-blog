@@ -23,7 +23,7 @@ draft: false
 
 ## 30 分鐘窗口是什麼、為什麼重要
 
-TikTok 演算法對每支新影片都會做分批推送測試。根據 [TikTok Newsroom 對推薦系統的官方說明](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you),系統會先給一小群樣本用戶,觀察他們的觀看行為(完播、停留、互動),再決定要不要擴大推送範圍。
+TikTok 演算法對每支新影片都會做分批推送測試。根據 [TikTok Newsroom 對推薦系統的官方說明](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you),系統會先給一小群樣本用戶,觀察他們的觀看行為(完播、停留、互動),再決定要不要擴大推送範圍。這個機制在 [TikTok Creator Portal 對初始推送窗口的說明](https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/understanding-your-analytics/)中也有對應描述——新影片的前幾小時數據對後續推送量有決定性影響。
 
 這個「小樣本測試」在實測經驗裡集中在發文後前 30 分鐘。原因有二:
 
@@ -51,6 +51,8 @@ TikTok 後台不直接顯示「分鐘級」的觸及變化,但你可以用兩個
 ---
 
 ## 8 支影片的 30 分鐘窗口實測數據
+
+以下數據是 2026 年 6 月在同一台灣小商家帳號連續追蹤的 8 支影片，採用相同主題、相近時段，唯一變數是鉤子設計影響的前 30 分鐘完播率。這樣的設計讓「完播率」這個變數的影響相對單純，可以直接對比高低完播率組的最終觸及差距。
 
 以下是 2026 年 6 月間我在同一個台灣小商家帳號連續發布的 8 支影片,分成「高完播率組」和「低完播率組」的數據對比:
 
@@ -124,6 +126,14 @@ TikTok 後台不直接顯示「分鐘級」的觸及變化,但你可以用兩個
 
 **Q3:分鐘級追蹤太累了,有沒有簡化版?**
 可以只記三個時間點:發文後 5 分鐘、15 分鐘、30 分鐘。這三個點的觀看數 + 完播率變化已經足夠判斷這支影片的初始推送等級,不用每 5 分鐘刷。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-completion-rate-vs-engagement-rate" >}}：30 分鐘窗口的完播率閾值背後的邏輯——完播率 vs 互動率哪個在推送決策裡權重更高，4 週 A/B 實測數據。
+- {{< relref "tiktok-best-posting-time-taiwan" >}}：30 分鐘窗口互動品質的前提是目標受眾在線——台灣電商 vs 實體店帳號的最佳發文時段實測。
+- {{< relref "tiktok-cold-start-30-day-diary" >}}：分鐘級數據放在更長時間軸的脈絡下看——冷啟動 30 天逐週觸及變化，可以對照自己帳號的成長曲線。
 
 ---
 

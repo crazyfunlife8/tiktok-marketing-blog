@@ -103,4 +103,12 @@ TikTok 的推薦系統對每種互動賦予的權重不一樣。根據 [TikTok N
 
 ---
 
+## 延伸閱讀
+
+- {{< relref "tiktok-completion-rate-vs-engagement-rate" >}}：互動率在完播率之後才有意義——這篇說明完播率優先的原因，以及冷啟動期互動率的加乘機制。
+- {{< relref "tiktok-script-3-part-framework" >}}：引導轉發型內容需要腳本結構配合——3 段式框架（鉤子 + 正片 + CTA）怎麼設計才能自然引出轉發 CTA。
+- {{< relref "tiktok-algorithm-initial-30min-window" >}}：互動信號在 30 分鐘窗口期的統計意義——轉發信號為什麼比留言更快被演算法讀取。
+
+---
+
 *本文數據來自 2026 年台灣中型帳號 15 支影片分組實測。TikTok 各類互動的權重會隨演算法更新調整，實際比例建議在自己帳號上再驗證一次。如果你需要付費廣告輔助擴大高互動信號帶來的觸及擴散，可以參考 [跳動E投放](https://nestdigitalai.com/services/ads) 的 TikTok 廣告代投服務。*

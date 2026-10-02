@@ -31,7 +31,7 @@ draft: false
 
 沒有框架的影片會犯的錯是:鉤子太長(前 5 秒還在自我介紹)、正片講太多(一支影片塞 3 個重點)、CTA 太硬(「快來追蹤我」或「快下單」講起來讓人尷尬)。這三個錯誤都會直接影響完播率——而完播率是 TikTok 演算法在冷啟動期最看重的訊號,詳細的權重對比可以看{{< relref "tiktok-completion-rate-vs-engagement-rate" >}}的 A/B 實測。
 
-根據 [TikTok Creator Portal 對短影音敘事結構的官方建議](https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/creative-planning),平台在演算法設計時對「有清晰起承轉合結構」的影片會給更高的推送權重——這是有結構的腳本會贏的第一個原因。
+根據 [TikTok Creator Portal 對短影音敘事結構的官方建議](https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/creative-planning),平台在演算法設計時對「有清晰起承轉合結構」的影片會給更高的推送權重——這是有結構的腳本會贏的第一個原因。[TikTok Business 對廣告創意最佳實踐的研究](https://www.tiktok.com/business/en/blog/creative-best-practices)也印證了這個結論：有明確三段式架構（鉤子/核心/行動引導）的創意在完播率和轉換率上都顯著優於無結構影片。
 
 ---
 
@@ -136,6 +136,14 @@ draft: false
 3. **CTA 好奇心導向更符合台灣文化**。台灣觀眾對「業務感重」的 CTA 抗拒度高,好奇心導向的 CTA 更容易被接受。
 
 腳本結構定好之後、下一個要對齊的是拍攝場景——實測台灣小商家最有效的零成本場景是窗邊自然光（完播率 52%）、比戶外自然光和產品展示台都高。5 種零成本場景組合排名可以看 {{< relref "tiktok-zero-cost-shooting-taiwan" >}} 的實地測試整理。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-hook-type-comparison" >}}：腳本第一段（鉤子）的選擇直接決定完播率——三種鉤子類型的 A/B 實測，找到適合你商家類型的鉤子。
+- {{< relref "tiktok-zero-cost-shooting-taiwan" >}}：腳本結構定好之後，拍攝場景是完播率的下一個槓桿——5 種零成本場景組合的完播率排名。
+- {{< relref "tiktok-editing-rhythm-for-algorithm" >}}：腳本內容和剪輯節奏要一起設計——2-3 秒切換頻率如何配合腳本的鉤子段、正片段、CTA 段。
 
 ---
 

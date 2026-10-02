@@ -121,4 +121,12 @@ TikTok 的初始推送池大約是幾百到幾千人。系統要在幾分鐘到�
 
 ---
 
+## 延伸閱讀
+
+- {{< relref "tiktok-algorithm-initial-30min-window" >}}：完播率如何在發文後前 30 分鐘觸發推送擴大——8 支影片的分鐘級追蹤實測，看到完播率閾值 40% 的臨界點。
+- {{< relref "tiktok-engagement-signal-ranking" >}}：互動率的細部拆解——轉發、收藏、留言三種信號哪個推力最強，15 支影片分組實測排名。
+- {{< relref "tiktok-reach-stuck-3-types-diagnosis" >}}：如果帳號完播率長期卡在 25-30%，這篇有三種卡關類型的診斷框架，對症下藥。
+
+---
+
 *本文數據來自 2026 年 3–4 月台灣市場兩帳號並行實測。TikTok 演算法持續調整，建議每季重新驗證帳號的觸及來源分布。如果你正在評估廣告投放配合有機成長的策略，[跳動E投放](https://nestdigitalai.com/services/ads)提供台灣小商家 TikTok 廣告代投服務，可以作為有機成長的付費輔助選項。*

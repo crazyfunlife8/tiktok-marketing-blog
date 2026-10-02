@@ -29,11 +29,13 @@ TikTok 演算法在遇到「全新帳號 + 第一支影片」時，需要決定�
 
 當第 1 類訊號不完整時，系統只能用第 2、3 類做粗略推送。結果就是「內容給了對的人 vs 給了不對的人」的差別——第一批推送池的品質決定了後續互動的樣態，進而影響帳號的長期分類標籤。
 
-根據 [TikTok Newsroom 對推薦系統的公開說明](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you)，新帳號的初始評估期會參考所有可用訊號，訊號越完整、推送越精準。這就是為什麼「先完成初始化再發文」比「邊發邊補」更能拿到準確的初始推送池。
+根據 [TikTok Newsroom 對推薦系統的公開說明](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you)，新帳號的初始評估期會參考所有可用訊號，訊號越完整、推送越精準。[TikTok Creator Academy 的帳號優化指南](https://www.tiktok.com/creator-academy/en/article/how-to-grow-on-tiktok)也特別強調初始設定的完整性對帳號長期成長的影響——這就是為什麼「先完成初始化再發文」比「邊發邊補」更能拿到準確的初始推送池。
 
 ---
 
 ## 5 步驟完整清單（正確順序）
+
+這五個步驟的排序有其邏輯：前面的步驟是演算法讀取帳號訊號的前置條件，必須在發文前完成，否則後面步驟帶來的收益會被大打折扣。建議按表格順序一步一步執行，不要跳過任何一步。
 
 | 順序 | 步驟 | 為什麼是這個順位 | 常見錯誤 |
 |---|---|---|---|
@@ -84,6 +86,14 @@ TikTok 演算法在遇到「全新帳號 + 第一支影片」時，需要決定�
 **注意四：不要在第一支影片就放大量 hashtag。** 3-5 個精準 hashtag 比 15 個亂槍打鳥有效——後者會讓演算法對帳號的分類判斷更混亂。
 
 如果第一支影片發出去觸及不如預期、想確認是不是踩到什麼雷，可以對照{{< relref "tiktok-account-shadowban-diagnosis" >}}的自診清單排查。冷啟動期後續 30 天的完整操作紀錄，可以參考{{< relref "tiktok-cold-start-30-day-diary" >}}的逐週決策日誌，[account-setup 分類](/posts/account-setup/)也有其他初始化相關的實測整理。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-account-bio-keyword-setup" >}}：Step 2 的核心——bio 關鍵字的具體填法、三個欄位的演算法讀法、三種商家類型示範範本。
+- {{< relref "tiktok-personal-vs-business-account" >}}：Step 1 帳號類型的選擇影響後續自然流量，30 天實測個人號 vs 企業號的觸及差距。
+- {{< relref "tiktok-cold-start-30-day-diary" >}}：初始化完成後，冷啟動 30 天的逐週操作紀錄，含每週發片決策與觸及數據。
 
 ---
 

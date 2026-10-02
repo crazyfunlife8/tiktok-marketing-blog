@@ -22,7 +22,7 @@ draft: false
 
 ## 為什麼封面在 TikTok 搜尋流量時代更重要
 
-TikTok 早期封面權重低——因為 For You 是「自動播放」機制、觀眾看不到封面就直接看影片。但 2024 年後隨著搜尋流量佔比大幅上升（見 [TikTok Business 對搜尋功能的官方說明](https://www.tiktok.com/business/en/blog/tiktok-search-what-marketers-need-to-know)）、封面的重要性快速攀升。原因有二：
+TikTok 早期封面權重低——因為 For You 是「自動播放」機制、觀眾看不到封面就直接看影片。但 2024 年後隨著搜尋流量佔比大幅上升（見 [TikTok Business 對搜尋功能的官方說明](https://www.tiktok.com/business/en/blog/tiktok-search-what-marketers-need-to-know)）、封面的重要性快速攀升。[TikTok Creator Portal 對縮圖設計的最佳實踐建議](https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/creative-planning/)也明確指出清晰的縮圖文字和視覺對比對搜尋點擊率有直接影響。原因有二：
 
 **原因一：搜尋結果頁是「縮圖清單」呈現。** 觀眾在 TikTok 搜尋一個關鍵字後、看到的是 9-12 個影片縮圖並排——這時候封面決定觀眾點哪一支。同樣的搜尋排名下、封面設計好的影片點擊率可以是普通封面的 2-4 倍、直接影響搜尋觸及的實際流量。
 
@@ -35,6 +35,8 @@ TikTok 早期封面權重低——因為 For You 是「自動播放」機制、�
 ---
 
 ## 我的 4 種封面類型 A/B 測試設計
+
+為什麼選這 4 種類型？因為這 4 種是台灣小商家帳號裡最常見的封面設計方向，各自代表一種設計思路：資訊承諾（含數字標題）、人際連結（人臉）、商品展示（產品圖）、純視覺（無文字美觀圖）。把這 4 種放在相同條件下比較，才能知道哪種設計思路對台灣用戶最有效。
 
 **測試變數：** 同一批影片（4 組 × 6 支 = 24 支）分別設計 4 種不同類型的封面：
 - **A 組（6 支）：** 含數字標題封面（例：「這 3 個技巧讓我完播率翻倍」）
@@ -88,6 +90,14 @@ TikTok 早期封面權重低——因為 For You 是「自動播放」機制、�
 背景色與文字色的對比要明顯——白底黑字 / 深色底白字 / 亮色底深色字。避免同色系（例：淺藍底白字）、觀眾在快速滑動時看不清就直接跳過。
 
 搭配封面設計、標題文字策略同樣重要——關鍵字布局在標題 / 說明 / 字幕的效果對比可以看 {{< relref "tiktok-search-algorithm-keyword-2026" >}} 的 12 支影片 A/B 實測、與本文封面 CTR 一起優化才是完整的搜尋觸及方案。剪輯節奏對完播率的影響則可以看 {{< relref "tiktok-editing-rhythm-for-algorithm" >}}——封面拉觀眾進來、剪輯節奏留住觀眾、兩者是配對關係。更多素材製作實測可以看 [material 分類](/posts/material/) 的整理。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-search-algorithm-keyword-2026" >}}：封面決定觀眾點不點進來，標題關鍵字決定搜尋結果頁有沒有出現你——兩者配合才是完整的搜尋觸及方案。
+- {{< relref "tiktok-editing-rhythm-for-algorithm" >}}：封面把觀眾拉進來，剪輯節奏留住觀眾完播——封面 CTR 和完播率是配對關係，都要優化。
+- {{< relref "tiktok-hook-type-comparison" >}}：封面決定點擊，鉤子（影片前 3 秒）決定繼續看不看——三種鉤子類型的完播率 A/B 實測，與封面設計是互補關係。
 
 ---
 

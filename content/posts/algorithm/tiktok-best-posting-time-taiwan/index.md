@@ -24,7 +24,7 @@ draft: false
 
 TikTok 演算法對新影片的初始推送有一個「發文後前 30 分鐘互動品質」的評估窗口（詳見{{< relref "tiktok-algorithm-initial-30min-window" >}}的分鐘級追蹤）。這個窗口期的互動品質決定了影片能不能進入更大範圍的 For You 推薦池——而互動品質很大程度取決於「發文時你的目標受眾有沒有在滑手機」。
 
-根據 [TikTok Newsroom 對推薦系統的公開說明](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you)，使用者的觀看時長、完播率、互動率都是推薦系統的關鍵訊號。時段選對，這些訊號才會在最短時間內累積到門檻，觸發後續的推送擴大。
+根據 [TikTok Newsroom 對推薦系統的公開說明](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you)，使用者的觀看時長、完播率、互動率都是推薦系統的關鍵訊號。時段選對，這些訊號才會在最短時間內累積到門檻，觸發後續的推送擴大。[TikTok Creator Portal 對觀眾活躍時段分析的說明](https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/understanding-your-analytics/)也建議創作者善用後台的「觀眾活躍時段」數據確認自己帳號的黃金時段。
 
 台灣使用者的 TikTok 活躍時段跟其他市場不同——因為時區、工作型態、通勤習慣都有在地特性。直接抄海外的「最佳時段建議」通常失準。
 
@@ -52,6 +52,8 @@ TikTok 演算法對新影片的初始推送有一個「發文後前 30 分鐘互
 ---
 
 ## 台灣電商帳號最佳時段數據
+
+電商帳號的目標受眾（25-40 歲女性上班族）有明顯的作息規律，這個規律直接決定了哪個時段「有人在線 + 有心情看購物內容」的交集最大。先看數據，再往下看各時段的行為邏輯解釋。
 
 電商帳號的 5 個時段實測結果：
 
@@ -121,6 +123,14 @@ TikTok 演算法對新影片的初始推送有一個「發文後前 30 分鐘互
 **誤解二：「時段選對就能爆紅」。** 時段是「加成訊號」不是「決定訊號」——內容本身品質仍是主體。時段對能讓好內容表現更好，但救不了差內容。
 
 **誤解三：「連續一週固定同時段發最有效」。** 適度固定有幫助（讓追蹤者養成期待），但完全固定會讓演算法對「同時段的相同帳號」有疲勞效應。建議主時段 + 次時段輪流，避免單一時段過度依賴。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-algorithm-initial-30min-window" >}}：發文時段選對，前 30 分鐘的互動品質才能最大化——這篇說明 30 分鐘窗口的完播率閾值和推送決策機制。
+- {{< relref "tiktok-posting-frequency-ab-test" >}}：時段決定之後，每週發幾篇也影響觸及穩定度——每天發 vs 每週 3 篇的 4 週 A/B 實測數據。
+- {{< relref "tiktok-search-algorithm-keyword-2026" >}}：台灣本地搜尋流量的時段熱點與 For You 不同，關鍵字布局配合最佳發文時段效果更明顯。
 
 ---
 

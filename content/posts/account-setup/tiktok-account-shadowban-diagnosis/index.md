@@ -36,6 +36,8 @@ draft: false
 
 ## 8 個常見限流原因自診清單
 
+以下 8 個原因依照「觸發難易度」排列——前面幾個最常見、後面幾個較少見但一旦觸發影響最深。建議從第 1 個開始逐一比對，確認哪個最可能是你的情況，不要全部打勾，找到最高嫌疑的那一個集中處理。
+
 | # | 原因 | 自診方法 | 常見發生時機 |
 |---|---|---|---|
 | 1 | 內容含平台敏感詞 | 對照 [TikTok 社群自律公約](https://www.tiktok.com/community-guidelines/zh-Hant-TW/) 掃過近 7 天文案 | 剛換題材、蹭時事熱點 |
@@ -91,6 +93,14 @@ TikTok 客服對「shadowban 申訴」的回應率極低（我 3 次踩坑只有
 5. **持續追蹤 14 天觸及趨勢**——確認是否真的回穩，還是只是短期波動
 
 冷啟動階段的帳號更容易誤判為限流——因為初期本來就會有觸及震盪。如果你的帳號還在起號期,先看{{< relref "tiktok-cold-start-30-day-diary" >}}裡的正常觸及波動範圍,再判斷是不是真被限流。帳號初始的 bio 設定也會影響限流判定的初始權重,可以搭配{{< relref "tiktok-account-bio-keyword-setup" >}}一起排查。想深入了解限流背後的演算法邏輯,可以參考 [algorithm 分類](/posts/algorithm/)裡的完整拆解。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-account-bio-keyword-setup" >}}：帳號 bio 設定是否正確也會影響限流判定的初始權重，這篇有完整的 bio 關鍵字設定方法。
+- {{< relref "tiktok-cold-start-30-day-diary" >}}：冷啟動期的帳號容易誤判為限流，這篇有完整的 30 天觸及正常波動範圍，幫助你區分兩者。
+- {{< relref "tiktok-completion-rate-vs-engagement-rate" >}}：限流排除後，完播率是恢復帳號推薦分數最直接的槓桿，這篇有完播率 vs 互動率的優先序實測。
 
 ---
 

@@ -124,4 +124,12 @@ TikTok 官方申請免費。不要相信任何「代辦收費」的服務——T
 
 ---
 
+## 延伸閱讀
+
+- {{< relref "tiktok-personal-vs-business-account" >}}：申請商業帳號驗證前，先看個人號 vs 企業號的自然流量 30 天實測，確認商業帳號驗證是否真的必要。
+- {{< relref "tiktok-account-bio-keyword-setup" >}}：驗證通過後立刻要做的事——重新優化 bio 關鍵字，企業認證後 bio 有更多字元空間可用。
+- {{< relref "tiktok-account-shadowban-diagnosis" >}}：帳號類型切換與認證後可能有觸及震盪，這篇有 8 個自診項目幫你排查是不是踩到限流。
+
+---
+
 *本文流程紀錄基於 2026 年台灣三家小商家的實際申請經驗整理。TikTok 商業帳號的申請條件與流程持續在調整，實際送件前建議先到 TikTok Business Center 確認最新規範。如果你的商業帳號驗證是為了配合廣告投放，可以參考 [跳動E投放](https://nestdigitalai.com/services/ads) 的 TikTok 廣告代投服務，我們可以協助處理認證後的廣告後台對接與投放策略。*

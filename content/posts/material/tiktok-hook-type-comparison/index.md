@@ -22,6 +22,8 @@ draft: false
 
 ## 三種鉤子類型定義
 
+之所以把鉤子分成這三種類型，是因為它們觸發觀眾「不划走」的心理機制不同：問句觸發的是「好奇心」，驚喜數字觸發的是「信任感 + 具體承諾」，情境代入觸發的是「臨場感 + 情感連結」。三種機制各自適合不同的商家類型和內容目標，這就是為什麼「選對鉤子類型」比「隨便選一個鉤子」在完播率上差距可以到 15 個百分點。
+
 在拆數據之前先把三種鉤子類型定義清楚,避免混淆:
 
 **問句型**:用一個問句開場,引導觀眾產生「我也想知道答案」的心理反應。範例:「你知道台南人早餐吃甜點是有原因的嗎?」「為什麼便宜的洗衣精反而洗不乾淨?」
@@ -54,7 +56,7 @@ draft: false
 
 <!-- IG-data: A/B 測試設計實測參數與變數控制條件 -->
 
-根據 [TikTok Creator Portal 對前 3 秒開場的官方建議](https://www.tiktok.com/creators/creator-portal/en-us/getting-started-on-tiktok/tiktok-basics),影片的前 3 秒對完播率有決定性影響——這也是為什麼鉤子類型的選擇會直接反應在完播數據上。
+根據 [TikTok Creator Portal 對前 3 秒開場的官方建議](https://www.tiktok.com/creators/creator-portal/en-us/getting-started-on-tiktok/tiktok-basics),影片的前 3 秒對完播率有決定性影響——這也是為什麼鉤子類型的選擇會直接反應在完播數據上。[TikTok Business 對創作者內容製作最佳實踐的建議](https://www.tiktok.com/business/en/blog/creative-best-practices)同樣強調「勾住觀眾的開場設計」是高表現 TikTok 內容的共同特徵。
 
 ---
 
@@ -148,6 +150,14 @@ draft: false
 這個 SOP 的邏輯是先用最高完播率的類型建立帳號權重,再逐步實驗找到自己的最佳配比。避免一開始就三種類型平均分配,會拖慢帳號的完播率權重累積。
 
 鉤子選定後、下一個影響完播率的槓桿是剪輯節奏——實測 2-3 秒切換一次的節奏完播率最高、每 1-2 秒過密和每 4 秒以上過慢都會拖低完播率。手機 CapCut 剪出算法偏好節奏的完整方法可以看 {{< relref "tiktok-editing-rhythm-for-algorithm" >}} 的 12 支影片實測與 3 個操作技巧。
+
+---
+
+## 延伸閱讀
+
+- {{< relref "tiktok-editing-rhythm-for-algorithm" >}}：鉤子決定前 3 秒，剪輯節奏決定後續完播率——2-3 秒切換頻率的完播率實測，兩者是配對優化。
+- {{< relref "tiktok-script-3-part-framework" >}}：鉤子是腳本第一段，和正片、CTA 組成完整 3 段式框架——12 支影片驗證的完整腳本設計拆解。
+- {{< relref "tiktok-completion-rate-vs-engagement-rate" >}}：鉤子提高完播率，完播率影響推送量——這篇說明完播率在整個推送機制中的地位和複利效果。
 
 ---
 

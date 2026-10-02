@@ -93,4 +93,12 @@ TikTok 帳號的「地區」訊號其實不只一個欄位，實測會影響推�
 
 ---
 
+## 延伸閱讀
+
+- {{< relref "tiktok-account-bio-keyword-setup" >}}：地區設定之外，bio 關鍵字是另一個影響推送精準度的關鍵環節，決定演算法把內容分類推給哪一群用戶。
+- {{< relref "tiktok-personal-vs-business-account" >}}：帳號類型（個人號 vs 企業號）與地區設定都影響冷啟動期的觸及效率，30 天實測對比。
+- {{< relref "tiktok-cold-start-30-day-diary" >}}：地區訊號確認後，冷啟動 30 天的完整操作紀錄，含每週觸及變化模式。
+
+---
+
 *本文數據來自 2026 年 5-6 月台灣小商家帳號 A/B 實測。TikTok 的地區判定邏輯持續在調整，實際效果建議在自己帳號上再驗證一次。如果你需要付費廣告輔助擴大特定市場觸及，可以參考 [跳動E投放](https://nestdigitalai.com/services/ads) 的 TikTok 廣告代投服務，付費廣告的地區定向比自然流量的地區訊號直接得多。*
